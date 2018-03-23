@@ -5,12 +5,11 @@ Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'jlanzarotta/bufexplorer'
+Plug 'qpkorr/vim-bufkill'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 call plug#end()
 "}}}
-
-autocmd vimenter * NERDTree
 
 set clipboard+=unnamed
 :vnoremap < <gv
@@ -29,9 +28,9 @@ set autoindent
 set backspace=eol,indent,start
 set expandtab
 set smarttab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 set shiftround
 set linebreak
 "}}}
@@ -63,4 +62,8 @@ set directory=$HOME/.vim/swapdir
 
 "line numbers {{{
 set number
+"}}}
+
+"reveal in side bar (nerd tree) {{{
+nmap ,n :NERDTreeFind<CR>
 "}}}
