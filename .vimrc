@@ -11,6 +11,8 @@ Plug 'mxw/vim-jsx'
 call plug#end()
 "}}}
 
+let mapleader=,
+
 set clipboard+=unnamed
 :vnoremap < <gv
 :vnoremap > >gv
@@ -65,5 +67,9 @@ set number
 "}}}
 
 "reveal in side bar (nerd tree) {{{
-nmap ,n :NERDTreeFind<CR>
+nnoremap <leader>n :NERDTreeFind<CR>
+"}}}
+
+"close stuff {{{
+nnoremap <leader>w :BD<cr>
 "}}}
