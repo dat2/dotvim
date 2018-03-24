@@ -11,7 +11,7 @@ Plug 'mxw/vim-jsx'
 call plug#end()
 "}}}
 
-let mapleader=,
+let mapleader = ","
 
 set clipboard+=unnamed
 :vnoremap < <gv
