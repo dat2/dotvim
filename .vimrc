@@ -73,3 +73,7 @@ nnoremap <leader>n :NERDTreeFind<CR>
 "close stuff {{{
 nnoremap <leader>w :BD<cr>
 "}}}
+
+"nerd tree show hidden files {{{
+let NERDTreeShowHidden = 1
+"}}}
