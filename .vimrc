@@ -21,8 +21,8 @@ set clipboard+=unnamed
 :vnoremap < <gv
 :vnoremap > >gv
 
-" pane switching {{{
-" hjkl, left, down, up, right
+"split switching {{{
+"hjkl, left, down, up, right
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-h> <C-w><C-h>
@@ -73,19 +73,18 @@ set number
 "nerd tree {{{
 "reveal in side bar (nerdtree)
 nnoremap <leader>n :NERDTreeFind<CR>
-"open nerd tree, and go back into buffer
+"open nerd tree
 nnoremap <leader>m :NERDTree<CR>
-"}}}
-
-"close stuff {{{
-nnoremap <leader>w :BD<cr>
-"}}}
-
-"nerd tree show hidden files {{{
+"show dot files
 let NERDTreeShowHidden = 1
+"}}}
+
+"close buffer without closing split {{{
+nnoremap <leader>w :BD<cr>
 "}}}
 
 "neoformatter {{{
 nnoremap <leader>p :Neoformat prettier<CR>
+"useful for rust
 nnoremap <leader>f :Neoformat<CR>
 "}}}
