@@ -16,10 +16,7 @@ call plug#end()
 
 let mapleader = ","
 
-
 set clipboard+=unnamed
-:vnoremap < <gv
-:vnoremap > >gv
 
 "split switching {{{
 "hjkl, left, down, up, right
