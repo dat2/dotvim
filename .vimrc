@@ -8,10 +8,13 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'qpkorr/vim-bufkill'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'rust-lang/rust.vim'
+Plug 'sbdchd/neoformat'
 call plug#end()
 "}}}
 
 let mapleader = ","
+
 
 set clipboard+=unnamed
 :vnoremap < <gv
@@ -76,4 +79,8 @@ nnoremap <leader>w :BD<cr>
 
 "nerd tree show hidden files {{{
 let NERDTreeShowHidden = 1
+"}}}
+
+"neoformatter {{{
+nnoremap <leader>p :Neoformat prettier<CR>
 "}}}
