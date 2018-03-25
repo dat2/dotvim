@@ -10,6 +10,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'rust-lang/rust.vim'
 Plug 'sbdchd/neoformat'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 "}}}
 
