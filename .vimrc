@@ -69,8 +69,11 @@ set directory=$HOME/.vim/swapdir
 set number
 "}}}
 
-"reveal in side bar (nerd tree) {{{
+"nerd tree {{{
+"reveal in side bar (nerdtree)
 nnoremap <leader>n :NERDTreeFind<CR>
+"open nerd tree, and go back into buffer
+nnoremap <leader>u :NERDTree<CR><C-w><C-l>
 "}}}
 
 "close stuff {{{
@@ -83,4 +86,5 @@ let NERDTreeShowHidden = 1
 
 "neoformatter {{{
 nnoremap <leader>p :Neoformat prettier<CR>
+nnoremap <leader>f :Neoformat<CR>
 "}}}
