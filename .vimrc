@@ -73,7 +73,7 @@ set number
 "reveal in side bar (nerdtree)
 nnoremap <leader>n :NERDTreeFind<CR>
 "open nerd tree, and go back into buffer
-nnoremap <leader>m :NERDTree<CR><C-w><C-l>
+nnoremap <leader>m :NERDTree<CR>
 "}}}
 
 "close stuff {{{
