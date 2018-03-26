@@ -60,7 +60,7 @@ endif
 "}}}
 
 "put swap files in central location {{{
-set directory=$HOME/.vim/swapdir
+set directory=$HOME/.config/nvim/swapdir
 "}}}
 
 "line numbers {{{
