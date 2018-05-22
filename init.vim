@@ -11,6 +11,8 @@ Plug 'mxw/vim-jsx'
 Plug 'rust-lang/rust.vim'
 Plug 'sbdchd/neoformat'
 Plug 'tpope/vim-fugitive'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'w0rp/ale'
 call plug#end()
 "}}}
 
@@ -28,6 +30,7 @@ nnoremap <C-l> <C-w><C-l>
 
 "indentation and tabs {{{
 set autoindent
+set copyindent
 set backspace=eol,indent,start
 set expandtab
 set smarttab
@@ -85,3 +88,5 @@ nnoremap <leader>p :Neoformat prettier<CR>
 "useful for rust
 nnoremap <leader>f :Neoformat<CR>
 "}}}
+
+let g:gutentags_file_list_command = 'git ls-files'
