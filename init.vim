@@ -16,14 +16,15 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'bling/vim-airline'
 Plug 'majutsushi/tagbar'
 Plug 'ap/vim-css-color'
-Plug 'chriskempson/base16-vim'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'ryanoasis/vim-devicons'
+Plug 'mhartington/oceanic-next'
 call plug#end()
 "}}}
 
 let mapleader = ","
 
 set clipboard+=unnamed
+set encoding=UTF-8
 
 "split switching {{{
 "hjkl, left, down, up, right
@@ -94,10 +95,6 @@ let g:gutentags_file_list_command = 'git ls-files'
 nnoremap <leader>t :TagbarToggle<CR>
 "}}}
 
-"split {{{
-nnoremap <leader>v :vsp<CR>
-"}}}
-
 "FZF {{{
 nnoremap <leader>; :FZF<CR>
 "}}}
@@ -107,4 +104,10 @@ nnoremap [l :lprevious<CR>
 nnoremap ]l :lnext<CR>
 nnoremap [L :lfirst<CR>
 nnoremap ]L :llast<CR>
+"}}}
+
+"theme {{{
+syntax enable
+colorscheme OceanicNext
+let g:airline_theme='oceanicnext'
 "}}}
