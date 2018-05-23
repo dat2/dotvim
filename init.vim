@@ -17,6 +17,7 @@ Plug 'bling/vim-airline'
 Plug 'majutsushi/tagbar'
 Plug 'ap/vim-css-color'
 Plug 'chriskempson/base16-vim'
+Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 "}}}
 
@@ -83,10 +84,6 @@ nnoremap <leader>m :NERDTreeToggle<CR>
 let NERDTreeShowHidden = 1
 "}}}
 
-"close buffer without closing split {{{
-nnoremap <leader>w :BD<cr>
-"}}}
-
 "neoformatter {{{
 nnoremap <leader>f :Neoformat<CR>
 "}}}
@@ -99,4 +96,8 @@ nnoremap <leader>t :TagbarToggle<CR>
 
 "split {{{
 nnoremap <leader>v :vsp<CR>
+"}}}
+
+"FZF {{{
+nnoremap <leader>; :FZF<CR>
 "}}}
