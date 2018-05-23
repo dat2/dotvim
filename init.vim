@@ -101,3 +101,10 @@ nnoremap <leader>v :vsp<CR>
 "FZF {{{
 nnoremap <leader>; :FZF<CR>
 "}}}
+
+"ALE mappings {{{
+nnoremap [l :lprevious<CR>
+nnoremap ]l :lnext<CR>
+nnoremap [L :lfirst<CR>
+nnoremap ]L :llast<CR>
+"}}}
