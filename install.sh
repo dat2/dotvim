@@ -13,3 +13,6 @@ CWD=`pwd`
 cd ~/.config/nvim
 ln -s $CWD/init.vim init.vim
 cd -
+
+# ctags
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
