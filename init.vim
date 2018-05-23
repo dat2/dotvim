@@ -15,6 +15,8 @@ Plug 'w0rp/ale'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'bling/vim-airline'
 Plug 'majutsushi/tagbar'
+Plug 'ap/vim-css-color'
+Plug 'chriskempson/base16-vim'
 call plug#end()
 "}}}
 
@@ -76,7 +78,7 @@ set number
 "reveal in side bar (nerdtree)
 nnoremap <leader>n :NERDTreeFind<CR>
 "open nerd tree
-nnoremap <leader>m :NERDTree<CR>
+nnoremap <leader>m :NERDTreeToggle<CR>
 "show dot files
 let NERDTreeShowHidden = 1
 "}}}
