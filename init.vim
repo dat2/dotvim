@@ -10,9 +10,11 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'rust-lang/rust.vim'
 Plug 'sbdchd/neoformat'
-Plug 'tpope/vim-fugitive'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'w0rp/ale'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'bling/vim-airline'
+Plug 'majutsushi/tagbar'
 call plug#end()
 "}}}
 
@@ -84,9 +86,15 @@ nnoremap <leader>w :BD<cr>
 "}}}
 
 "neoformatter {{{
-nnoremap <leader>p :Neoformat prettier<CR>
-"useful for rust
 nnoremap <leader>f :Neoformat<CR>
 "}}}
 
 let g:gutentags_file_list_command = 'git ls-files'
+
+"tagbar {{{
+nnoremap <leader>t :TagbarToggle<CR>
+"}}}
+
+"split {{{
+nnoremap <leader>v :vsp<CR>
+"}}}
