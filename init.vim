@@ -18,6 +18,7 @@ Plug 'majutsushi/tagbar'
 Plug 'ap/vim-css-color'
 Plug 'ryanoasis/vim-devicons'
 Plug 'mhartington/oceanic-next'
+Plug 'ambv/black'
 call plug#end()
 "}}}
 
@@ -89,7 +90,9 @@ let NERDTreeShowHidden = 1
 nnoremap <leader>f :Neoformat<CR>
 "}}}
 
+"gutentags {{{
 let g:gutentags_file_list_command = 'git ls-files'
+"}}}
 
 "tagbar {{{
 nnoremap <leader>t :TagbarToggle<CR>
