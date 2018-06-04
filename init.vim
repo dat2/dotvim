@@ -19,6 +19,8 @@ Plug 'ap/vim-css-color'
 Plug 'ryanoasis/vim-devicons'
 Plug 'mhartington/oceanic-next'
 Plug 'ambv/black'
+Plug 'tpope/vim-fugitive'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 "}}}
 
@@ -100,6 +102,7 @@ nnoremap <leader>t :TagbarToggle<CR>
 
 "FZF {{{
 nnoremap <leader>; :FZF<CR>
+nnoremap <leader>' :Tags<CR>
 "}}}
 
 "ALE mappings {{{
