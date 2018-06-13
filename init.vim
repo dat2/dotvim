@@ -21,6 +21,7 @@ Plug 'mhartington/oceanic-next'
 Plug 'ambv/black'
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
 call plug#end()
 "}}}
 
