@@ -22,6 +22,7 @@ Plug 'ambv/black'
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
+Plug 'Shougo/deoplete.nvim'
 call plug#end()
 "}}}
 
@@ -133,3 +134,5 @@ nnoremap <Right> <Nop>
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
 "}}}
+
+let g:deoplete#enable_at_startup = 1
