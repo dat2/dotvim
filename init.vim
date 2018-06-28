@@ -23,6 +23,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'Shougo/deoplete.nvim'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 call plug#end()
 "}}}
 
@@ -92,6 +96,8 @@ let NERDTreeShowHidden = 1
 
 "neoformatter {{{
 nnoremap <leader>f :Neoformat<CR>
+
+let g:neoformat_enabled_javascript = ['prettier', 'eslint_d']
 "}}}
 
 "gutentags {{{
@@ -136,3 +142,15 @@ nnoremap <Down> <Nop>
 "}}}
 
 let g:deoplete#enable_at_startup = 1
+
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ 'javascript': ['javascript-typescript-stdio'],
+    \ 'python': ['pyls'],
+    \ }
+
+nnoremap <silent> <leader>c :call LanguageClient_contextMenu()<CR>
+" Or map each action separately
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
