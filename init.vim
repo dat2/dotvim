@@ -92,6 +92,7 @@ let NERDTreeShowHidden = 1
 
 "neoformatter {{{
 nnoremap <leader>f :Neoformat<CR>
+nnoremap <leader>p :ALEFix eslint<CR>
 "}}}
 
 "gutentags {{{
