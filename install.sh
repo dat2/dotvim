@@ -21,3 +21,6 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew tap caskroom/fonts
 brew cask install font-hack-nerd-font
 echo "Remember to update the fonts on your terminal (eg. set Hack Nerd Font)"
+
+# language servers
+pip install python-language-server
