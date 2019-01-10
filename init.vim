@@ -27,6 +27,7 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 "}}}
 
