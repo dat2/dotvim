@@ -1,14 +1,16 @@
 #!/bin/sh
 
-BREW_EXISTS=[ -x "$(command -v brew)" ]
-APT_EXISTS=[ -x "$(command -v apt)" ]
-SNAP_EXISTS=[ -x "$(command -v snap)" ]
+BREW_EXISTS="$(command -v brew)"
+APT_EXISTS="$(command -v apt)"
+SNAP_EXISTS="$(command -v snap)"
 
 # install neovim
-if $BREW_EXISTS; then
-  brew install neovim
-elif $APT_EXISTS; then
-  sudo apt install neovim -y
+if [ -x $BREW_EXISTS ]; then
+    brew install neovim
+elif [ -x $APT_EXISTS ]; then
+    sudo add-apt-repository ppa:neovim-ppa/stable
+    sudo apt update
+    sudo apt install neovim -y
 fi
 
 # install vim plug (for nvim)
@@ -23,16 +25,19 @@ ln -s $CWD/init.vim init.vim
 cd -
 
 # ctags
-if $BREW_EXISTS; then
+if [ -x $BREW_EXISTS ]; then
   brew install --HEAD universal-ctags/universal-ctags/universal-ctags
-elif $SNAP_EXISTS; then
+elif [ -x $SNAP_EXISTS ]; then
   sudo snap install universal-ctags
 fi
 
 # fonts
-brew tap caskroom/fonts
-brew cask install font-hack-nerd-font
+mkdir -p ~/.fonts
+git clone https://github.com/ryanoasis/nerd-fonts ~/.fonts/nerd-fonts
+cd ~/.fonts/nerd-fonts
+./install.sh
+cd -
 echo "Remember to update the fonts on your terminal (eg. set Hack Nerd Font)"
 
 # language servers
-pip install python-language-server
+pip3 install python-language-server
