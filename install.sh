@@ -1,7 +1,15 @@
 #!/bin/sh
 
+BREW_EXISTS=[ -x "$(command -v brew)" ]
+APT_EXISTS=[ -x "$(command -v apt)" ]
+SNAP_EXISTS=[ -x "$(command -v snap)" ]
+
 # install neovim
-brew install neovim
+if $BREW_EXISTS; then
+  brew install neovim
+elif $APT_EXISTS; then
+  sudo apt install neovim -y
+fi
 
 # install vim plug (for nvim)
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
@@ -15,7 +23,11 @@ ln -s $CWD/init.vim init.vim
 cd -
 
 # ctags
-brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+if $BREW_EXISTS; then
+  brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+elif $SNAP_EXISTS; then
+  sudo snap install universal-ctags
+fi
 
 # fonts
 brew tap caskroom/fonts
